@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  nas-floater-dapp-server:
+  nas-pastebin-dapp-server:
     image: kun368/nas-pastebin:master
     restart: always
     ports:
