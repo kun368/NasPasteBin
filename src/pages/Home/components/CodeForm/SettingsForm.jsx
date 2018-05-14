@@ -177,6 +177,10 @@ export default class SettingsForm extends Component {
         });
     };
 
+    handleResult = (txHash) => {
+        console.log("!!!!!!!!!!!!!!!!!!!" + txHash);
+    };
+
     validateAllFormField = () => {
         this.refs.form.validateAll((errors, values) => {
             console.log('error', errors, 'value', values);
@@ -212,6 +216,7 @@ export default class SettingsForm extends Component {
                         console.log('Transaction hash:\n' + JSON.stringify(dat.txhash, null, '\t'));
                         if (JSON.stringify(dat).indexOf('Error') === -1) {
                             Toast.success('已提交交易，请稍候！');
+                            this.handleResult(dat.txhash.txhash);
                         }
                     }
                 } catch (e) {
