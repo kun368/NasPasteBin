@@ -8,6 +8,8 @@ import {
     FormError as IceFormError,
 } from '@icedesign/form-binder';
 import './SettingsForm.scss';
+import { Base64 } from 'js-base64';
+
 
 const {Row, Col} = Grid;
 const {Group: RadioGroup} = Radio;
@@ -144,7 +146,7 @@ const optionDataSource = [
     {label: 'yaml', value: 'yaml'},
 ];
 
-const dappAddress = "n1p2MydveNYK2QBgoyxwhPQjbSqQ1PPb5Gb";
+const dappAddress = "n1u4tS3eNqDf3s13LbsB3VpJPoFsbxXosn3";
 
 
 export default class SettingsForm extends Component {
@@ -177,7 +179,7 @@ export default class SettingsForm extends Component {
 
     validateAllFormField = () => {
         this.refs.form.validateAll((errors, values) => {
-            console.log('error', errors, 'value', value);
+            console.log('error', errors, 'value', values);
             if (errors) {
                 return;
             }
@@ -186,8 +188,8 @@ export default class SettingsForm extends Component {
                 return;
             }
             const contract = {
-                function: 'sendMsg',
-                args: `[]`,
+                function: 'addItem',
+                args: `["${values.poster}", "${values.type}", "${Base64.encode(values.content)}"]`,
             };
             window.postMessage({
                 'target': 'contentscript',
