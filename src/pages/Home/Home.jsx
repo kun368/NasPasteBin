@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import PlatformIntro from './components/PlatformIntro';
-import PlatformToolsIntro from './components/PlatformToolsIntro';
 import PlatformJoinus from './components/PlatformJoinus';
 import PlatformLanding from './components/PlatformLanding';
-import PlatformBlackIntro from './components/PlatformBlackIntro';
 import SettingsForm from "./components/CodeForm/SettingsForm";
 
 export default class Home extends Component {
@@ -22,9 +19,6 @@ export default class Home extends Component {
                 <Header/>
                 <PlatformLanding/>
                 <SettingsForm/>
-                <PlatformToolsIntro/>
-                <PlatformIntro/>
-                <PlatformBlackIntro/>
                 <PlatformJoinus/>
                 <Footer/>
             </div>

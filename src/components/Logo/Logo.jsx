@@ -18,8 +18,9 @@ export default class Logo extends Component {
           textAlign: 'left',
         }}
       >
-        <a href="/" style={{ display: 'block', position: 'relative' }}>
-          <img src={logo} width="129" height="35" alt="logo" />
+        <a href="http://www.zzkun.com" style={{ display: 'block', position: 'relative' }}>
+          {/*<img src={logo} width="129" height="35" alt="logo" />*/}
+          <h1>CodeKun</h1>
         </a>
       </div>
     );
