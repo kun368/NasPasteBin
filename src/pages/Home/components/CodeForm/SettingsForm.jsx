@@ -1,7 +1,7 @@
 /* eslint  react/no-string-refs: 0 */
 import React, {Component} from 'react';
 import IceContainer from '@icedesign/container';
-import {Input, Button, Radio, Switch, Upload, Grid, Select,Feedback} from '@icedesign/base';
+import {Input, Button, Radio, Switch, Upload, Grid, Select,Feedback, Dialog} from '@icedesign/base';
 import {
     FormBinderWrapper as IceFormBinderWrapper,
     FormBinder as IceFormBinder,
@@ -164,6 +164,8 @@ export default class SettingsForm extends Component {
                 type: '',
                 content: ''
             },
+            dialogVisible: false,
+            dialogContent: '',
         };
     }
 
@@ -177,8 +179,17 @@ export default class SettingsForm extends Component {
         });
     };
 
+    onClose = () => {
+        this.setState({
+            visible: false
+        });
+    };
+
     handleResult = (txHash) => {
-        console.log("!!!!!!!!!!!!!!!!!!!" + txHash);
+        this.setState({
+            dialogVisible: true,
+            dialogContent: "http://" + window.location.host + "/#/p/" + txHash
+        });
     };
 
     validateAllFormField = () => {
@@ -292,6 +303,17 @@ export default class SettingsForm extends Component {
                         </Col>
                     </Row>
                 </IceContainer>
+                <Dialog
+                    visible={this.state.dialogVisible}
+                    closable="esc,mask,close"
+                    title="提示"
+                    onOk={this.onClose}
+                    onCancel={this.onClose}
+                    onClose={this.onClose}
+                >
+                    <h3>已为您生成PasteBin查看地址（交易成功后可用）</h3>
+                    <h5><a href={this.state.dialogContent} target="_blank">{this.state.dialogContent}</a></h5>
+                </Dialog>
             </div>
         );
     }

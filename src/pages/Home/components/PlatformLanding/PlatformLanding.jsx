@@ -53,7 +53,7 @@ const styles = {
   buttons: { textAlign: 'center', marginTop: 33 },
   body: {
     position: 'absolute',
-    top: '190px',
+    top: '100px',
     left: '50%',
     marginLeft: '-300px',
     width: '600px',
@@ -64,7 +64,7 @@ const styles = {
   },
   wrapper: {
     overflow: 'hidden',
-    height: 720,
+    height: 400,
     backgroundImage:
       'url("https://img.alicdn.com/tfs/TB1DgSmSpXXXXaJXpXXXXXXXXXX-2760-1480.jpg")',
     position: 'relative',
