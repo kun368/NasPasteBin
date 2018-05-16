@@ -200,7 +200,6 @@ export default class SettingsForm extends Component {
             }
             if (!this.checkInstalledPlugin()) {
                 Toast.error('还未安装Chrome扩展，请点击页面上方的下载按钮');
-                return;
             }
             const contract = {
                 function: 'addItem',
@@ -218,7 +217,6 @@ export default class SettingsForm extends Component {
                 },
                 'method': 'neb_sendTransaction',
             }, '*');
-            Toast.success('请确认已发起的交易！');
             window.addEventListener('message', resp => {
                 console.log('response of push: ', resp);
                 try {
