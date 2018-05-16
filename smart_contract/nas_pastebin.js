@@ -60,7 +60,7 @@ NasFloater.prototype = {
         item.nickname = nickname;
         item.type = type;
         item.content = content;
-        this.repo.put(item.id, item);
+        this.repo.put(item.hash, item);
         this.counter = this.counter.plus(1);
         return item;
     },

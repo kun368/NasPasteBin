@@ -146,7 +146,7 @@ const optionDataSource = [
     {label: 'yaml', value: 'yaml'},
 ];
 
-const dappAddress = "n1u4tS3eNqDf3s13LbsB3VpJPoFsbxXosn3";
+const dappAddress = "n1qoYgjTUKwGVgeTmessCSL46gChtaqA5ch";
 
 
 export default class SettingsForm extends Component {
