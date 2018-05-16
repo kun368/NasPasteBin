@@ -146,7 +146,7 @@ const optionDataSource = [
     {label: 'yaml', value: 'yaml'},
 ];
 
-const dappAddress = "n1qoYgjTUKwGVgeTmessCSL46gChtaqA5ch";
+const dappAddress = "n22gG1rJ2YrGE3UhCwQZ1cMfbzxvGDDkUW8";
 
 
 export default class SettingsForm extends Component {
@@ -181,7 +181,7 @@ export default class SettingsForm extends Component {
 
     onClose = () => {
         this.setState({
-            visible: false
+            dialogVisible: false
         });
     };
 

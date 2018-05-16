@@ -9,8 +9,8 @@ import {coy, funky, atomDark} from 'react-syntax-highlighter/styles/prism';
 
 const ButtonGroup = Button.Group;
 
-const dappAddress = "n1qoYgjTUKwGVgeTmessCSL46gChtaqA5ch";
-const userAddress = "n1Vx6iSFM12aJWZw7Q9nTNsDWaX16kXrtsG";
+const dappAddress = "n22gG1rJ2YrGE3UhCwQZ1cMfbzxvGDDkUW8";
+const userAddress = "n1ZTecB8Tpb7X7LBL7j3ZcGLVvMrXmVfLfy";
 
 
 const themeDataSource = [
@@ -23,7 +23,7 @@ const themeDataSource = [
 @DataBinder({
     tableData: {
         // 详细请求配置请参见 https://github.com/axios/axios
-        url: 'https://testnet.nebulas.io/v1/user/call',
+        url: 'https://mainnet.nebulas.io/v1/user/call',
         method: 'post',
         headers: {'content-type': 'application/json;charset=UTF-8'},
         data: {
